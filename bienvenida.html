@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pagina de Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+<script>
+        window.onload = function () {
+            const sections = document.querySelectorAll('.section');
+        
+            sections.forEach(section => {
+                section.addEventListener('mouseenter', function () {
+                    this.style.backgroundColor = '#f7f7f7';
+                    this.style.border = '1px solid #007bff';
+                });
+            
+                section.addEventListener('mouseleave', function () {
+                    this.style.backgroundColor = '';
+                    this.style.border = '';
+                });
+            });
+        };
+    </script>
+
+</head>
+<body>
+    <div class="header">Bienvenido/a</div>
+    <div class="menu">
+        <a href="bienvenida.html">Bienvenida</a>
+        <a href="datos-biograficos.html">Datos Biográficos</a>
+        <a href="hoja-de-vida.html">Hoja de Vida</a>
+        <a href="material-de-interes.html">Material de Interés</a>
+    </div>
+    <div class="content">
+        <h1 id="bienvenida">Bienvenida</h1>
+        <p>
+           ¡Bienvenido/a a mi sitio web!
+        </p>
+	<p>
+           Aquí encontrarás una variedad de contenido interesante y relevante. Desde datos biográficos hasta mi experiencia laboral, pasando por enlaces de interés y material 	multimedia que espero te resulte entretenido y útil.
+	</p>
+	<p>
+	No dudes en explorar las diferentes secciones y páginas para conocer más sobre mí y lo que tengo para compartir contigo. Si tienes alguna pregunta o comentario, no 	dudes en ponerte en contacto. ¡Espero que disfrutes tu visita!
+	</p>
+        <img src="bienvenida.jpg" alt="Imagen Flotante">
+    </div>
+    
+    <!-- Chat -->
+    <div class="chat-container">
+        <div class="chat">
+            <div class="messages"></div>
+            <div class="input">
+                <input type="text" id="senderName" placeholder="Nombre del Remitente">
+                <input type="text" id="messageText" placeholder="Texto del mensaje">
+                <button id="sendMessage">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const sections = document.querySelectorAll('.section');
+            const chatMessagesContainer = document.querySelector('.messages');
+            
+            sections.forEach(section => {
+                section.addEventListener('mouseenter', function () {
+                    this.style.backgroundColor = '#f7f7f7';
+                    this.style.border = '1px solid #007bff';
+                });
+                
+                section.addEventListener('mouseleave', function () {
+                    this.style.backgroundColor = '';
+                    this.style.border = '';
+                });
+            });
+
+            const senderNameInput = document.getElementById('senderName');
+            const messageTextInput = document.getElementById('messageText');
+            const sendMessageButton = document.getElementById('sendMessage');
+
+            sendMessageButton.addEventListener('click', function () {
+                const senderName = senderNameInput.value.trim();
+                const messageText = messageTextInput.value.trim();
+
+                if (senderName === '' || messageText === '') {
+                    alert('Por favor, ingrese tanto el nombre del remitente como el texto del mensaje.');
+                    return;
+                }
+
+                if (messageText.length > 300) {
+                    alert('El texto del mensaje no debe superar los 300 caracteres.');
+                    return;
+                }
+
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message');
+                messageElement.innerHTML = `<strong>${senderName}:</strong> ${messageText}`;
+
+                chatMessagesContainer.appendChild(messageElement);
+                senderNameInput.value = '';
+                messageTextInput.value = '';
+            });
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+

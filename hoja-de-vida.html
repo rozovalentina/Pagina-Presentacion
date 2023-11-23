@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href= "styles.css">
+</head>
+<body>
+    <div class="header">Hoja de Vida</div>
+    <div class="menu">
+        <a href="bienvenida.html">Bienvenida</a>
+        <a href="datos-biograficos.html">Datos Biográficos</a>
+        <a href="hoja-de-vida.html">Hoja de Vida</a>
+        <a href="material-de-interes.html">Material de Interés</a>
+    </div>
+    <div class="content">
+        <h1 id="hoja-de-vida">Hoja de Vida</h1>
+	<ul class="index">
+	    <li><a href="#acercade">Acerca de</a></li>
+            <li><a href="#experiencia">Experiencia Laboral</a></li>
+            <li><a href="#estudios">Estudios</a></li>
+            <li><a href="#idiomas">Idiomas</a></li>
+            <li><a href="#conocimientos">Conocimientos y Aptitudes</a></li>
+        </ul>
+
+        <section id="acercade" class="section">
+            <h2>Acerca de</h2>
+            <div class="subsection">
+                <p>Estudiante de ingeniería de sistemas en la Pontificia Universidad Javeriana, que ama la tecnologia y redes sociales</p>
+            </div>
+        </section>
+        <section id="experiencia" class="section">
+            <h2>Experiencia Laboral</h2>
+            <div class="subsection">
+                <ul>
+                    <li>Deposito Imperio LER</li>
+                    <p> Encargado de redes sociales</p>
+                    <p>ago. 2020 - actualidad · 3 años 1 mes</p>
+                    <li>Frutilandia</li>
+                    <p> Encargado de redes sociales</p>
+                    <p>may. 2021 - oct. 2021 · 6 meses</p>
+                </ul>
+            </div>
+        </section>
+        <section id="estudios" class="section">
+            <h2>Educación</h2>
+            <div class="subsection">
+                <ul>
+                    <li>Colegio la Salle Villavicencio</li>
+                    <li>Pontificia Universidad Javeriana</li>
+                </ul>
+            </div>
+        </section>
+        <section id="idiomas" class="section">
+            <h2>Idiomas</h2>
+            <div class="subsection">
+                <ul>
+                    <li>Ingles</li>
+                    <li>Español</li>
+                </ul>
+            </div>
+        </section>
+        <section id="conocimientos" class="section">
+            <h2>Conocimientos y aptitudes</h2>
+            <div class="subsection">
+                <ol>
+                    <li>Estrategia digital</li>
+                    <li>Comunicación</li>
+                    <li>Marketing de redes sociales</li>
+                    <li>Aplicaciones móviles</li>
+                    <li>Espíritu de equipo</li>
+                    <li>Visión estratégica</li>
+                    <li>Redes sociales</li>
+                    <li>Programación</li>
+                    <li>Inglés</li>
+                    <li>C++</li>
+                    <li>Programación en C</li>
+                    <li>Java</li>
+                    <li>Programación orientada a objetos (POO)</li>
+                    <li>Instagram</li>
+                    <li>Marketing en Instagram</li>
+                    <li>Publicidad en Instagram</li>
+                    <li>Gestion de Proyectos</li>
+                </ol>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const sections = document.querySelectorAll('.section');
+            const indexLinks = document.querySelectorAll('.index a');
+            
+            sections.forEach(section => {
+                section.addEventListener('mouseenter', function () {
+                    this.style.backgroundColor = '#f7f7f7';
+                    this.style.border = '1px solid #007bff';
+                });
+                
+                section.addEventListener('mouseleave', function () {
+                    this.style.backgroundColor = '';
+                    this.style.border = '';
+                });
+            });
+            
+            indexLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+        };
+    </script>
+</body>
+</html>

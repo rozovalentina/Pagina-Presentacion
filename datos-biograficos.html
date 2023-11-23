@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Datos Biográficos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">Datos Biográficos</div>
+    <div class="menu">
+        <a href="bienvenida.html">Bienvenida</a>
+        <a href="datos-biograficos.html">Datos Biográficos</a>
+        <a href="hoja-de-vida.html">Hoja de Vida</a>
+        <a href="material-de-interes.html">Material de Interés</a>
+    </div>
+    <div class="content">
+        <h1 id="datos-biograficos">Datos Biográficos</h1>
+        <table class="table">
+            <tr>
+                <th>Campo</th>
+                <th>Información</th>
+            </tr>
+            <tr>
+                <td>Nombre</td>
+                <td>Valentina</td>
+            </tr>
+	    <tr>
+                <td>Apellido</td>
+                <td>Rozo</td>
+            </tr>
+            <tr>
+                <td>Fecha de Nacimiento</td>
+                <td>20/07/2001</td>
+            </tr>
+            <tr>
+                <td>Nacionalidad</td>
+                <td>Colombiana</td>
+            </tr>
+            <tr>
+                <td>Lugar de Nacimiento</td>
+                <td>Villavicencio</td>
+            </tr>
+            <tr>
+                <td>Estatura</td>
+                <td>1.50 m</td>
+            </tr>
+            <!-- Agrega más filas según tus datos -->
+        </table>
+    </div>
+
+    <script>
+        window.onload = function () {
+            const sections = document.querySelectorAll('.section');
+            
+            sections.forEach(section => {
+                section.addEventListener('mouseenter', function () {
+                    this.style.backgroundColor = '#f7f7f7';
+                    this.style.border = '1px solid #007bff';
+                });
+                
+                section.addEventListener('mouseleave', function () {
+                    this.style.backgroundColor = '';
+                    this.style.border = '';
+                });
+            });
+        };
+    </script>
+</body>
+</html>

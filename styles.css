@@ -1,0 +1,99 @@
+/* Estilos generales */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1, h2 {
+    color: #007bff;
+    text-decoration: underline #b4d6f0;
+}
+.header {
+    background-color: #343a40;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+.menu {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+.menu a:hover {
+    background-color: #555;
+}
+
+/* Estilos específicos */
+.content {
+    padding: 20px;
+}
+.floating-image {
+    border: 1px solid black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    float: right;
+    margin: 10px;
+}
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.table th, .table td {
+    padding: 8px;
+    text-align: left;
+}
+.table th {
+    background-color: #343a40;
+    color: white;
+}
+.table tr:nth-child(even) {
+    background-color: white;
+}
+.table tr:nth-child(odd) {
+    background-color: #c3e6cb;
+}
+
+/* Otros estilos para secciones y subsecciones */
+.section {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px 0;
+    background: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+}
+.section h2 {
+    margin-top: 0;
+}
+
+/* Estilos para el chat */
+.chat-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.chat {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.messages {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.message {
+    margin-bottom: 10px;
+}
+
